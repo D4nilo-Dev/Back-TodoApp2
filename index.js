@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/api', routes);
 
 const PORT = process.env.PORT || 3000;
-const dbURI = process.env.MONGO_URI;
+const dbURI = process.env.MONGO_DB;
 // Conexão com MongoDB
 mongoose.connect(dbURI);
 
