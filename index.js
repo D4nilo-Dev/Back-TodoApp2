@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/api', routes);
 
 const PORT = process.env.PORT || 3000;
-const dbURI = 'mongodb+srv://vinicius242264:<bobjunior22>@cluster0.mongodb.net/seuBanco?retryWrites=true&w=majority';
+const dbURI = process.env.MONGO_DB;
 // Conexão com MongoDB
 mongoose.connect(dbURI);
 
